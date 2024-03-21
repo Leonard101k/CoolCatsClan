@@ -43,22 +43,50 @@ main {
 
 .section {
     margin-bottom: 40px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* Center align text */
 }
 
 .logo img {
     width: 50px;
 }
 
-.cat-gallery {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.cat-image {
-    margin: 10px;
+.banner {
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.banner img {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.cat-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cat-image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cat-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
@@ -66,54 +94,116 @@ main {
     transform: scale(1.05);
 }
 
-.cat-image img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    transition: opacity 0.3s ease;
+
+/* Responsive layout adjustments */
+
+@media screen and (max-width: 768px) {
+    .cat-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
 }
 
-h1,
-h2 {
-    font-weight: 700;
+@media screen and (max-width: 576px) {
+    .cat-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
 }
 
-h1 span,
-h2 span {
-    color: #FF6B6B;
-}
-
-.contact-form {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-    display: block;
+.slide-banner {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
+    height: 300px;
+    /* Adjust height as needed */
+    overflow: hidden;
+    position: relative;
 }
 
-.contact-form textarea {
-    resize: vertical;
+
+/* Add this CSS for the modern and fancy grid in the "About Us" section */
+
+.cat-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
 }
 
-.contact-form button {
-    background-color: #FF6B6B;
+.cat-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.cat-gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Add this CSS for the parallax banner effect */
+
+.parallax-banner {
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/801/136/845/cat-4k-widescreen-hd-wallpaper-preview.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+/* Add this CSS for the simple cat gallery */
+
+.cat-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.cat-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.cat-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.cat-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns */
+    grid-gap: 20px;
+    /* Gap between images */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    margin-top: 20px;
+    /* Add margin to space from text */
+}
+
+.cat-gallery img {
+    max-width: 100%;
+    /* Ensure images don't exceed container width */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add shadow */
+    transition: transform 0.3s ease;
+    /* Smooth hover effect */
+}
+
+.cat-gallery img:hover {
+    transform: scale(1.05);
+    /* Enlarge on hover */
+}
+
+.footer {
+    background: #1e1e1e;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #FF4D4D;
+    text-align-last: center;
 }

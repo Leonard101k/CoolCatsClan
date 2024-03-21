@@ -6,39 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat Lover's Club</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header id="header">
-        <div class="logo">
-            <img src="cat_logo.png" alt="Cat Logo">
+        <div class="logo" style="display: flex;">
+            <img src="styles/images/png-transparent-cat-whiskers-logo-silhouette-cat-logo-mammal-animals-cat-like-mammal.png" alt="Cat Logo">
+            <h3> Cool Cats Clan</h3>
         </div>
         <nav id="navbar">
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Cats</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#about">Info</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <div id="banner" class="parallax-banner"></div>
+
     <main>
         <section id="home" class="section">
-            <h1>Welcome to <span>Cat</span> Lover's Club</h1>
-            <div class="cat-gallery"></div>
+            <h1>Welcome to <span>Cat</span> Lover's Club web page</h1>
+            <p>Share your love for cats with fellow enthusiasts!</p>
         </section>
 
         <section id="about" class="section">
             <h2>About <span>Cats</span></h2>
             <p>Cats are amazing creatures. They are fluffy, independent, and mysterious. Our club is dedicated to celebrating the beauty and uniqueness of cats. From their adorable antics to their comforting presence, cats bring joy to our lives every day.</p>
+            <div class="cat-gallery"></div>
         </section>
 
         <section id="contact" class="section">
             <h2>Contact <span>Us</span></h2>
             <p>Have questions about our club? Want to join our community of cat lovers? Feel free to reach out to us!</p>
-            <form action="#" method="post" class="contact-form">
+            <form action="#" method="post" class="contact-form" style="
+            display: inline-grid;
+        ">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
@@ -47,7 +51,22 @@
         </section>
     </main>
 
-    <script src="styles/script.js"></script>
+    <footer id="footer" style="
+    background: black;
+    color: white;
+    text-align: center;
+">
+        <div class="logo">
+            <img src="styles/images/png-transparent-cat-whiskers-logo-silhouette-cat-logo-mammal-animals-cat-like-mammal.png" alt="Cat Logo">
+        </div>
+        <div class="contact-details">
+            <p>Contact Us:</p>
+            <p>Email: leonardkachumi@gmail.com</p>
+            <p>Phone: +260976231463</p>
+        </div>
+    </footer>
+
+    <script src="styles/script.js" defer></script>
 </body>
 
 </html>
